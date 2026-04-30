@@ -10,6 +10,7 @@ import NextButton from "./components/NextButton";
 import Progress from "./components/Progress";
 import FinishScreen from "./components/FinishScreen";
 import FinishButton from "./components/FinishButton";
+import questionsData from "../data/questions.json";
 
 const initialState = {
   questions: [],
@@ -94,10 +95,7 @@ export default function App() {
   const maxPoints = state.questions.reduce((prev, cur) => prev + cur.points, 0);
 
   useEffect(function () {
-    fetch("http://localhost:8000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
+    dispatch({ type: "dataReceived", payload: questionsData.questions });
   }, []);
 
   return (
