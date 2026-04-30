@@ -39,18 +39,5 @@ The app fetches quiz questions from a local API, then manages all states (questi
 using a centralized reducer. Users answer questions, get instant feedback, and see their final results at the end.
 </p>
 
-<h2>📸 Preview</h2>
-<p align="center">
-  <i>Add your screenshots here</i>
-</p>
-
-<h2>🏁 Getting Started</h2>
-<pre>
-npm install
-npm run dev
-</pre>
-
-<h2>👨‍💻 Author</h2>
-<p>
 Eyad Mahmoud
 </p>
